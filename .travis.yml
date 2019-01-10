@@ -2,10 +2,19 @@ jobs:
   include:
     -
       stage: build elasticsearch
-      script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - cd src/elasticsearch
-        - docker build -t neos-elasticsearch .
-        - docker images
-        - docker tag neos-elasticsearch $DOCKER_USERNAME/neos-elasticsearch
-        - docker push $DOCKER_USERNAME/neos-elasticsearch
+      script: make build DOCKER_IMAGE=elasticsearch
+    -
+      stage: build mailhog
+      script: make build DOCKER_IMAGE=mailhog
+    -
+      stage: build mariadb
+      script: make build DOCKER_IMAGE=mariadb
+    -
+      stage: build nginx
+      script: make build DOCKER_IMAGE=nginx
+    -
+      stage: build php-fpm
+      script: make build DOCKER_IMAGE=php-fpm
+    -
+      stage: build redis
+      script: make build DOCKER_IMAGE=redis
