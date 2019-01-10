@@ -1,6 +1,7 @@
 FROM nginx:1.14.2-alpine
 
 ENV PORT_NGINX 8081
+ENV PROJECT_ROOT=/project
 ENV PHP_FPM_HOST php-fpm
 ENV PHP_FPM_PORT 9000
 ENV FLOW_CONTEXT Development/Docker
