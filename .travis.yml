@@ -1,0 +1,11 @@
+jobs:
+  include:
+    -
+      stage: build elasticsearch
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - cd src/elasticsearch
+        - docker build -t neos-elasticsearch .
+        - docker images
+        - docker tag neos-elasticsearch $DOCKER_USERNAME/neos-elasticsearch
+        - docker push $DOCKER_USERNAME/neos-elasticsearch
