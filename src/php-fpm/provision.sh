@@ -113,8 +113,6 @@ curl -sS https://getcomposer.org/installer | php -- \
 #
 # Set correct permissions for SSH config
 #
-mkdir -p /home/www-data/.ssh
-touch /home/www-data/.ssh/config
 chown -R www-data:www-data /home/www-data/.ssh
 chmod 0600 /home/www-data/.ssh/config
 

@@ -1,0 +1,5 @@
+Host *
+    IdentityFile /run/secrets/id_rsa
+    AddKeysToAgent yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
