@@ -1,0 +1,3 @@
+# Mailhog Docker Image
+
+TODO

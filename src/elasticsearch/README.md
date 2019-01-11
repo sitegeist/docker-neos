@@ -1,0 +1,3 @@
+# Elasticsearch Docker Image
+
+TODO

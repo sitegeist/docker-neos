@@ -6,4 +6,7 @@ COPY ./.bashrc /home/www-data/.bashrc
 COPY ./ssh_config /home/www-data/.ssh/config
 
 COPY ./provision.sh /provision.sh
+
+ENV FLOW_CONTEXT Development/Docker
+
 RUN apk --update add --no-cache bash && /provision.sh
