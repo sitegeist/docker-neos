@@ -15,6 +15,7 @@ It is supposed to be used in conjunction with https://github.com/sitegeist/siteg
 4. [Redis](./src/redis/README.md)
 5. [Elasticsearch](./src/elasticsearch/README.md)
 6. [Mailhog](./src/mailhog/README.md)
+7. [TestCafé](./src/testcafe/README.md)
 
 ## License
 
