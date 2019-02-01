@@ -111,6 +111,11 @@ curl -sS https://getcomposer.org/installer | php -- \
     --install-dir=/usr/bin --filename=composer
 
 #
+# Composer plugin for parallel install of plugins
+#
+composer global require hirak/prestissimo
+
+#
 # Set correct permissions for SSH config
 #
 chown -R www-data:www-data /home/www-data/.ssh
