@@ -87,6 +87,10 @@ pecl install imagick
 # Neos caches
 pecl install redis
 
+#
+# PHP exension for highly performant serialization
+pecl install igbinary
+
 docker-php-ext-enable apcu imagick redis
 apk del .phpize-deps-configure
 docker-php-source delete
