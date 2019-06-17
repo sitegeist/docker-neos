@@ -2,7 +2,7 @@ FROM php:7.2.13-fpm-alpine
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 
-COPY ./.bashrc /home/www-data/.bashrc
+COPY ./00-aliases.sh /etc/profile.d/00-aliases.sh
 COPY ./ssh_config /etc/ssh/ssh_config
 
 COPY ./provision.sh /provision.sh

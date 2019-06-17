@@ -125,7 +125,3 @@ curl -sS https://getcomposer.org/installer | php -- \
 #
 composer global require hirak/prestissimo
 
-#
-# Set correct permissions for .bashrc
-#
-chown www-data:www-data /home/www-data/.bashrc
