@@ -108,6 +108,12 @@ docker-php-ext-install pdo_mysql
 docker-php-ext-install opcache
 
 #
+# Internationalization extension (a wrapper for ICU library)
+#
+$APK_ADD icu-dev
+docker-php-ext-install intl
+
+#
 # Install Composer
 #
 printf "\e[1;34m### Install composer \n \e[0m"
