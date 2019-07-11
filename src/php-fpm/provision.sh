@@ -31,6 +31,7 @@ $APK_ADD libpng-dev
 # required to build php imagick extension
 $APK_ADD imagemagick
 $APK_ADD imagemagick-dev
+cat /tmp/imagemagick-policy.xml >> /etc/ImageMagick-7/policy.xml
 
 # A uniform interface to several symmetric encryption algorithms
 # required to @TODO
