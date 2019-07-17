@@ -27,6 +27,9 @@ $APK_ADD libjpeg-turbo-dev
 # required to build php imagick extension
 $APK_ADD libpng-dev
 
+# Zip
+$APK_ADD libzip-dev
+
 # Collection of tools and libraries for many image formats
 # required to build php imagick extension
 $APK_ADD imagemagick
@@ -107,6 +110,10 @@ docker-php-ext-install pdo_mysql
 # Improves PHP performance by storing precompiled script bytecode
 # in shared memory
 docker-php-ext-install opcache
+
+# PHP ZIP
+docker-php-ext-configure zip --with-libzip=/usr/include
+docker-php-ext-install zip
 
 #
 # Internationalization extension (a wrapper for ICU library)
