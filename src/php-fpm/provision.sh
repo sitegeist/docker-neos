@@ -30,6 +30,12 @@ $APK_ADD libpng-dev
 # Zip
 $APK_ADD libzip-dev
 
+# libxml2
+$APK_ADD libxml2-dev
+
+# Soap
+# $APK_ADD soap
+
 # Collection of tools and libraries for many image formats
 # required to build php imagick extension
 $APK_ADD imagemagick
@@ -114,6 +120,9 @@ docker-php-ext-install opcache
 # PHP ZIP
 docker-php-ext-configure zip --with-libzip=/usr/include
 docker-php-ext-install zip
+
+# PHP Soap
+docker-php-ext-install soap
 
 #
 # Internationalization extension (a wrapper for ICU library)
